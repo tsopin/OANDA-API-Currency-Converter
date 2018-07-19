@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Meta : Codable {
-	let effective_params : Effective_params?
-	let endpoint : String?
-	let request_time : String?
-	let skipped_currency_pairs : [String]?
+struct Meta: Codable {
+	let effective_params: Effective_params?
+	let endpoint: String?
+	let request_time: String?
+	let skipped_currency_pairs: [String]?
 
 	enum CodingKeys: String, CodingKey {
 

@@ -12,10 +12,8 @@ class Service {
   
   static let instance = Service()
   
-//  var orders = [Meta]()
+  private let API_KEY = "KZpDof7EejOzKl9SuvU9OSgO"
   
-  let API_KEY = "KZpDof7EejOzKl9SuvU9OSgO"
-
   
   //2017-03-01
   
@@ -34,15 +32,37 @@ class Service {
         
         returnedRate = receivedData.quotes![0].midpoint!
         
-        
-//        for i in receivedOrders.quotes![0] {
-//          self.orders.append(i)
-//        }
-        
         handler(returnedRate)
         
       } catch let error {
-        print("JSON Error", error)
+        print("JSON Parsing Error", error)
+      }
+      }.resume()
+  }
+  
+  func getListOfCurrencies(handler: @escaping (_ returnedCurrencies: [Currencies]) -> ()) {
+    
+    guard let API_URL = URL(string: "https://web-services.oanda.com/rates/api/v2/currencies.json?api_key=\(API_KEY)")  else { return }
+    
+    URLSession.shared.dataTask(with: API_URL) { (data, response, error) in
+      guard let data = data else { return }
+      
+      var returnedCurrencies = [Currencies]()
+      
+      do {
+        
+        let decoder = JSONDecoder()
+        let receivedData = try decoder.decode(GetCurrencies.self, from: data)
+        
+        for i in receivedData.currencies! {
+          returnedCurrencies.append(i)
+          
+        }
+        print("ADD \(returnedCurrencies)")
+        handler(returnedCurrencies)
+        
+      } catch let error {
+        print("JSON Parsing Error", error)
       }
       }.resume()
   }

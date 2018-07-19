@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7440839F20FFF4E300639718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7440839E20FFF4E300639718 /* AppDelegate.swift */; };
-		744083A120FFF4E300639718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083A020FFF4E300639718 /* ViewController.swift */; };
+		744083A120FFF4E300639718 /* GetRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083A020FFF4E300639718 /* GetRatesVC.swift */; };
 		744083A420FFF4E300639718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744083A220FFF4E300639718 /* Main.storyboard */; };
 		744083A620FFF4E400639718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744083A520FFF4E400639718 /* Assets.xcassets */; };
 		744083A920FFF4E400639718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744083A720FFF4E400639718 /* LaunchScreen.storyboard */; };
@@ -17,12 +17,14 @@
 		744083BA20FFFFC700639718 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083B620FFFFC700639718 /* Meta.swift */; };
 		744083BB20FFFFC700639718 /* Effective_params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083B720FFFFC700639718 /* Effective_params.swift */; };
 		744083BD210000EC00639718 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BC210000EC00639718 /* Service.swift */; };
+		744083C021003A4300639718 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BE21003A4300639718 /* Currencies.swift */; };
+		744083C121003A4300639718 /* GetCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BF21003A4300639718 /* GetCurrencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7440839B20FFF4E300639718 /* OANDA API Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OANDA API Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7440839E20FFF4E300639718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		744083A020FFF4E300639718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		744083A020FFF4E300639718 /* GetRatesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRatesVC.swift; sourceTree = "<group>"; };
 		744083A320FFF4E300639718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		744083A520FFF4E400639718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		744083A820FFF4E400639718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		744083B620FFFFC700639718 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		744083B720FFFFC700639718 /* Effective_params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effective_params.swift; sourceTree = "<group>"; };
 		744083BC210000EC00639718 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		744083BE21003A4300639718 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		744083BF21003A4300639718 /* GetCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				744083B420FFFFC700639718 /* GetRates.swift */,
 				744083B620FFFFC700639718 /* Meta.swift */,
 				744083B520FFFFC700639718 /* Quotes.swift */,
+				744083BE21003A4300639718 /* Currencies.swift */,
+				744083BF21003A4300639718 /* GetCurrencies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,7 +105,6 @@
 			children = (
 				744083A220FFF4E300639718 /* Main.storyboard */,
 				744083A720FFF4E400639718 /* LaunchScreen.storyboard */,
-				744083A020FFF4E300639718 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 		744083B320FFF51900639718 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				744083A020FFF4E300639718 /* GetRatesVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,10 +190,12 @@
 			files = (
 				744083B920FFFFC700639718 /* Quotes.swift in Sources */,
 				744083BD210000EC00639718 /* Service.swift in Sources */,
-				744083A120FFF4E300639718 /* ViewController.swift in Sources */,
+				744083C121003A4300639718 /* GetCurrencies.swift in Sources */,
+				744083A120FFF4E300639718 /* GetRatesVC.swift in Sources */,
 				7440839F20FFF4E300639718 /* AppDelegate.swift in Sources */,
 				744083BA20FFFFC700639718 /* Meta.swift in Sources */,
 				744083B820FFFFC700639718 /* GetRates.swift in Sources */,
+				744083C021003A4300639718 /* Currencies.swift in Sources */,
 				744083BB20FFFFC700639718 /* Effective_params.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

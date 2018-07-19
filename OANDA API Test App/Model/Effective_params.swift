@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Effective_params : Codable {
-	let data_set : String?
-	let base_currencies : [String]?
-	let quote_currencies : [String]?
-	let date_time : String?
+struct Effective_params: Codable {
+	let data_set: String?
+	let base_currencies: [String]?
+	let quote_currencies: [String]?
+	let date_time: String?
 
 	enum CodingKeys: String, CodingKey {
 
