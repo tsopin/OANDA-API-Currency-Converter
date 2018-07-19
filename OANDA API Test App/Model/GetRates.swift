@@ -9,11 +9,11 @@
 import Foundation
 
 struct GetRates: Codable {
+  
 	let meta: Meta?
 	let quotes: [Quotes]?
 
 	enum CodingKeys: String, CodingKey {
-
 		case meta = "meta"
 		case quotes = "quotes"
 	}

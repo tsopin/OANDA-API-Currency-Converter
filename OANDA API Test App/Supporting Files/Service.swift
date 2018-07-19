@@ -14,9 +14,6 @@ class Service {
   
   private let API_KEY = "KZpDof7EejOzKl9SuvU9OSgO"
   
-  
-  //2017-03-01
-  
   func getOrdersFromAPI(base: String, quote: String, date: String, handler: @escaping (_ returnedRate: String) -> ()) {
     
     guard let API_URL = URL(string: "https://www.oanda.com/rates/api/v2/rates/spot.json?base=\(base)&quote=\(quote)&date_time=\(date)&api_key=\(API_KEY)")  else { return }
@@ -27,6 +24,7 @@ class Service {
       var returnedRate = String()
       
       do {
+        
         let decoder = JSONDecoder()
         let receivedData = try decoder.decode(GetRates.self, from: data)
         
@@ -54,11 +52,10 @@ class Service {
         let decoder = JSONDecoder()
         let receivedData = try decoder.decode(GetCurrencies.self, from: data)
         
-        for i in receivedData.currencies! {
-          returnedCurrencies.append(i)
-          
+        for currency in receivedData.currencies! {
+          returnedCurrencies.append(currency)
         }
-        print("ADD \(returnedCurrencies)")
+        
         handler(returnedCurrencies)
         
       } catch let error {

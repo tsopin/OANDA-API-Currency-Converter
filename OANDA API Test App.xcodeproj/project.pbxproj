@@ -19,6 +19,9 @@
 		744083BD210000EC00639718 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BC210000EC00639718 /* Service.swift */; };
 		744083C021003A4300639718 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BE21003A4300639718 /* Currencies.swift */; };
 		744083C121003A4300639718 /* GetCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BF21003A4300639718 /* GetCurrencies.swift */; };
+		74B2C2B32101080700C64958 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74D6932F2101058F00C87333 /* OpenSans-SemiBold.ttf */; };
+		74B2C2B42101080B00C64958 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74D693302101059500C87333 /* OpenSans-Regular.ttf */; };
+		74B2C2B52101080D00C64958 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74D6932E2101058900C87333 /* OpenSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		744083BC210000EC00639718 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		744083BE21003A4300639718 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		744083BF21003A4300639718 /* GetCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrencies.swift; sourceTree = "<group>"; };
+		74D6932E2101058900C87333 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		74D6932F2101058F00C87333 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		74D693302101059500C87333 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		744083B020FFF50600639718 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				74D6932D2101052800C87333 /* Fonts */,
 				744083A520FFF4E400639718 /* Assets.xcassets */,
 				7440839E20FFF4E300639718 /* AppDelegate.swift */,
 				744083BC210000EC00639718 /* Service.swift */,
@@ -90,12 +97,12 @@
 		744083B120FFF50F00639718 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				744083BE21003A4300639718 /* Currencies.swift */,
 				744083B720FFFFC700639718 /* Effective_params.swift */,
+				744083BF21003A4300639718 /* GetCurrencies.swift */,
 				744083B420FFFFC700639718 /* GetRates.swift */,
 				744083B620FFFFC700639718 /* Meta.swift */,
 				744083B520FFFFC700639718 /* Quotes.swift */,
-				744083BE21003A4300639718 /* Currencies.swift */,
-				744083BF21003A4300639718 /* GetCurrencies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +122,16 @@
 				744083A020FFF4E300639718 /* GetRatesVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		74D6932D2101052800C87333 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				74D6932F2101058F00C87333 /* OpenSans-SemiBold.ttf */,
+				74D693302101059500C87333 /* OpenSans-Regular.ttf */,
+				74D6932E2101058900C87333 /* OpenSans-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B2C2B42101080B00C64958 /* OpenSans-Regular.ttf in Resources */,
+				74B2C2B32101080700C64958 /* OpenSans-SemiBold.ttf in Resources */,
+				74B2C2B52101080D00C64958 /* OpenSans-Bold.ttf in Resources */,
 				744083A920FFF4E400639718 /* LaunchScreen.storyboard in Resources */,
 				744083A620FFF4E400639718 /* Assets.xcassets in Resources */,
 				744083A420FFF4E300639718 /* Main.storyboard in Resources */,

@@ -17,7 +17,6 @@ struct Quotes: Codable {
 	let midpoint: String?
 
 	enum CodingKeys: String, CodingKey {
-
 		case base_currency = "base_currency"
 		case quote_currency = "quote_currency"
 		case date_time = "date_time"

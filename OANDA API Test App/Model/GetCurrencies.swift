@@ -10,10 +10,10 @@
 import Foundation
 
 struct GetCurrencies : Codable {
+  
 	let currencies : [Currencies]?
 
 	enum CodingKeys: String, CodingKey {
-
 		case currencies = "currencies"
 	}
 }

@@ -10,11 +10,11 @@
 import Foundation
 
 struct Currencies : Codable {
+  
 	let code : String?
 	let description : String?
 
 	enum CodingKeys: String, CodingKey {
-
 		case code = "code"
 		case description = "description"
 	}
