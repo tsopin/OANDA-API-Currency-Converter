@@ -12,6 +12,11 @@
 		744083A420FFF4E300639718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744083A220FFF4E300639718 /* Main.storyboard */; };
 		744083A620FFF4E400639718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744083A520FFF4E400639718 /* Assets.xcassets */; };
 		744083A920FFF4E400639718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744083A720FFF4E400639718 /* LaunchScreen.storyboard */; };
+		744083B820FFFFC700639718 /* GetRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083B420FFFFC700639718 /* GetRates.swift */; };
+		744083B920FFFFC700639718 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083B520FFFFC700639718 /* Quotes.swift */; };
+		744083BA20FFFFC700639718 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083B620FFFFC700639718 /* Meta.swift */; };
+		744083BB20FFFFC700639718 /* Effective_params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083B720FFFFC700639718 /* Effective_params.swift */; };
+		744083BD210000EC00639718 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744083BC210000EC00639718 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		744083A520FFF4E400639718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		744083A820FFF4E400639718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		744083AA20FFF4E400639718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744083B420FFFFC700639718 /* GetRates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRates.swift; sourceTree = "<group>"; };
+		744083B520FFFFC700639718 /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		744083B620FFFFC700639718 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		744083B720FFFFC700639718 /* Effective_params.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effective_params.swift; sourceTree = "<group>"; };
+		744083BC210000EC00639718 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		7440839D20FFF4E300639718 /* OANDA API Test App */ = {
 			isa = PBXGroup;
 			children = (
-				7440839E20FFF4E300639718 /* AppDelegate.swift */,
-				744083A020FFF4E300639718 /* ViewController.swift */,
-				744083A220FFF4E300639718 /* Main.storyboard */,
-				744083A520FFF4E400639718 /* Assets.xcassets */,
-				744083A720FFF4E400639718 /* LaunchScreen.storyboard */,
+				744083B020FFF50600639718 /* Supporting Files */,
+				744083B120FFF50F00639718 /* Model */,
+				744083B220FFF51300639718 /* View */,
+				744083B320FFF51900639718 /* Controller */,
 				744083AA20FFF4E400639718 /* Info.plist */,
 			);
 			path = "OANDA API Test App";
+			sourceTree = "<group>";
+		};
+		744083B020FFF50600639718 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				744083A520FFF4E400639718 /* Assets.xcassets */,
+				7440839E20FFF4E300639718 /* AppDelegate.swift */,
+				744083BC210000EC00639718 /* Service.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		744083B120FFF50F00639718 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				744083B720FFFFC700639718 /* Effective_params.swift */,
+				744083B420FFFFC700639718 /* GetRates.swift */,
+				744083B620FFFFC700639718 /* Meta.swift */,
+				744083B520FFFFC700639718 /* Quotes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		744083B220FFF51300639718 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				744083A220FFF4E300639718 /* Main.storyboard */,
+				744083A720FFF4E400639718 /* LaunchScreen.storyboard */,
+				744083A020FFF4E300639718 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		744083B320FFF51900639718 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744083B920FFFFC700639718 /* Quotes.swift in Sources */,
+				744083BD210000EC00639718 /* Service.swift in Sources */,
 				744083A120FFF4E300639718 /* ViewController.swift in Sources */,
 				7440839F20FFF4E300639718 /* AppDelegate.swift in Sources */,
+				744083BA20FFFFC700639718 /* Meta.swift in Sources */,
+				744083B820FFFFC700639718 /* GetRates.swift in Sources */,
+				744083BB20FFFFC700639718 /* Effective_params.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "in.timsop.OANDA-API-Test-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "in.timsop.OANDA-API-Test-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
