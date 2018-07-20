@@ -71,11 +71,11 @@ class GetRatesVC: UIViewController {
     }
   }
   
-  @IBAction private func getRatedButtonPressed(_ sender: Any) {
+  @IBAction private func getRateButtonPressed(_ sender: Any) {
     activityIndicator.isHidden = false
     activityIndicator.startAnimating()
     
-    service.getOrdersFromAPI(base: base, quote: quote, date: quoteDate) { (rates) in
+    service.getRateFromAPI(base: base, quote: quote, date: quoteDate) { (rates) in
       DispatchQueue.main.async {
         self.rateLabel.text = rates
         self.activityIndicator.stopAnimating()

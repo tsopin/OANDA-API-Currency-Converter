@@ -14,7 +14,8 @@ class Service {
   
   private let API_KEY = "KZpDof7EejOzKl9SuvU9OSgO"
   
-  func getOrdersFromAPI(base: String, quote: String, date: String, handler: @escaping (_ returnedRate: String) -> ()) {
+  //Getting exhange rate for two currencies at a specified point in time
+  func getRateFromAPI(base: String, quote: String, date: String, handler: @escaping (_ returnedRate: String) -> ()) {
     
     guard let API_URL = URL(string: "https://www.oanda.com/rates/api/v2/rates/spot.json?base=\(base)&quote=\(quote)&date_time=\(date)&api_key=\(API_KEY)")  else { return }
     
@@ -38,6 +39,7 @@ class Service {
       }.resume()
   }
   
+  //Getting list of currencies from API
   func getListOfCurrencies(handler: @escaping (_ returnedCurrencies: [Currencies]) -> ()) {
     
     guard let API_URL = URL(string: "https://web-services.oanda.com/rates/api/v2/currencies.json?api_key=\(API_KEY)")  else { return }
